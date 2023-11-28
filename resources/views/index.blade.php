@@ -69,7 +69,7 @@
 
             <div class="sec contactBx">
                 <h2>Our Team</h2>
-                <p>Aminu Shaibu - FullStack Developer</p>
+                <p>Aminu Shaibu - Fullstack Developer</p>
                 <ul class="sci">
                     <li><a href="https://github.com/elameen37/"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://linkedin.com/in/aminu-shaibu-ab92368b"><i class="fa fa-linkedin"></i></a></li>
