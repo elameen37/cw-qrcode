@@ -17,24 +17,25 @@
 <body>
     <!-- nav -->
     <header>
-    <a href="{{ url('/') }}" class="logo"><img src="{{ asset('logo/logo_tech.png') }}"></a>
-    <div class="menuToggle" onclick="toggleMenu();"></div>
-    <ul class="navigation">
-        <li><a href="{{ url('contact') }}" onclick="toggleMenu();">Contact us</a></li>
-        @auth <!-- Check if user is authenticated -->
+        <a href="{{ url('/') }}" class="logo"><img src="{{ asset('logo/logo_tech.png') }}"></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="{{ url('about') }}" onclick="toggleMenu();">About us</a></li>
+            <li><a href="{{ url('contact') }}" onclick="toggleMenu();">Contact us</a></li>
+            @auth <!-- Check if user is authenticated -->
             <li><a href="{{ route('dashboard') }}" onclick="toggleMenu();">Generate QRcode</a></li>
             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-        @else
+            @else
             <li><a href="{{ route('login') }}" onclick="toggleMenu();">Login</a></li>
             <button type="button" class="bg-black hover:bg-slate-400 text-white font-bold text-lg py-3 px-4 ml-8 rounded">
-        <a href="{{ route('register') }}" class="text-white">Get Started</a>
-    </button>
-        @endauth
-    </ul>
-</header>
+                <a href="{{ route('register') }}" class="text-white">Get Started</a>
+            </button>
+            @endauth
+        </ul>
+    </header>
     <!-- banner -->
     <section class="banner" id="banner">
         <div class="content">
@@ -43,29 +44,14 @@
                 <h6>With a Reliable Platform That Never Fail</h6>
             </div><br>
             <button type="button" class="bg-black hover:bg-slate-400 text-white font-bold text-lg py-3 px-4 rounded">
-        <a href="{{ route('register') }}" class="text-white">+ Create QRcode</a>
-    </button>
+                <a href="{{ route('register') }}" class="text-white">+ Create QRcode</a>
+            </button>
         </div><br>
-        <div><img src="{{ asset('images/landing1.gif') }}" alt="" width="600px" height="500px"></div>
+        <div><img src="{{ asset('images/landing1.gif') }}" alt="" width="500px" height="400px"></div>
     </section>
     <!-- footer -->
     <footer>
         <div class="container">
-            <div class="sec aboutus">
-                <h2>About Us</h2>
-                <p>This project was inspired by several factors. Firstly, the main motivation was the desire to provide a useful
-                    tool for both individuals and businesses. The need for a convenient solution for a variety of purposes, such as
-                    sharing contact information and promoting advertisements, was identified. Given that numerous businesses and
-                    organizations require a reliable and flexible QR Code generator to create and personalize their codes, this
-                    presented a market opportunity that would meet these requirements. The fascination with the technical aspects
-                    of QR Codes, such as their encoding, decoding, and error correction algorithms, was also a significant factor
-                    that inspired this project. Furthermore, the exploration of the possibilities and limitations of QR Codes
-                    contributed to the inspiration behind the project. Click <a href="https://github.com/elameen37/qrcode_generator"><i>here</i></a> to view source code.
-                </p>
-                <ul class="sci">
-                    <!-- <li><a href="https://github.com/elameen37/"><i class="fa fa-github"></i></a></li> -->
-                </ul>
-            </div>
 
             <div class="sec contactBx">
                 <h2>Our Team</h2>
